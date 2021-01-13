@@ -41,6 +41,32 @@ public class SortTest {
         assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, testArray);
     }
 
+    @Test
+    public void TimSort_Insertion() {
+        TimSort ts = new TimSort();
+        int[] testArray = arraySample1;
+        ts.insertionSort(0,testArray.length-1, testArray);
+        assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, testArray);
+    }
+
+    @Test
+    public void TimSortTest() {
+        TimSort ts = new TimSort();
+        int[] testArray = arraySample1;
+        ts.timSort(testArray.length, testArray);
+        assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, testArray);
+    }
+
+    @TestHelper
+    public void TimSort_Merge() {
+        TimSort ts = new TimSort();
+        int[] testArray = arraySample1;
+        ts.mergeSort(0,testArray.length-1, testArray);
+        assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, testArray);
+    }
+
+
+
     public void DisplayResult(int[] testArray) {
         for(int i : testArray) {
             System.out.println(i);
