@@ -19,7 +19,6 @@ public class P42_Trapping_Rain_Water {
                 maxIndex = i;
         }
 
-
         while (center < size + 1) {
             int k = 0;
             int L = 0;
