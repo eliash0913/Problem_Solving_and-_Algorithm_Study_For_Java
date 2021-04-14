@@ -53,7 +53,7 @@ class P206_Reverse_Linked_ListTest {
         expectedHead.next.next.next = new ListNode(2);
         expectedHead.next.next.next.next = new ListNode(1);
 
-        ListNode currentActual = p206.rReverseList(inputHead);
+        ListNode currentActual = p206.reverseList(inputHead);
         ListNode currentExpect = expectedHead;
 
         ArrayList<Integer> expectedAL = new ArrayList<>();
