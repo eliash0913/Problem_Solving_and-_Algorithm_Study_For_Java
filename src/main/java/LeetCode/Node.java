@@ -110,7 +110,7 @@ class TestHelper{
         }
     }
 
-    static int[] GenerateArrayFromBinaryTree(TreeNode node) {
+    static Integer[] GenerateArrayFromBinaryTree(TreeNode node) {
         Queue<TreeNode> queue = new LinkedList();
         Queue<TreeNode> vals = new LinkedList<>();
         queue.add(node);
@@ -126,7 +126,7 @@ class TestHelper{
                 queue.add(head.right);
             }
         }
-        int[] arr = new int[vals.size()];
+        Integer[] arr = new Integer[vals.size()];
         int index = 0;
         while(!vals.isEmpty())
             arr[index++]=vals.poll().val;

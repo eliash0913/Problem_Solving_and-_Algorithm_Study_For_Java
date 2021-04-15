@@ -2,8 +2,17 @@ package LeetCode;
 
 public class P206_Reverse_Linked_List {
     public ListNode reverseList(ListNode head) {
-        return null;
+        ListNode previousNode=null;
+        ListNode currentNode=head;
+        while(currentNode!=null) {
+            ListNode temp = currentNode.next;
+            currentNode.next = previousNode;
+            previousNode = currentNode;
+            currentNode = temp;
+        }
+        return previousNode;
     }
+
 
 //    public ListNode reverseList(ListNode head) {
 //        ListNode previousNode = null;
